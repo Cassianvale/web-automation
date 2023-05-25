@@ -36,10 +36,9 @@ def pytest_runtest_makereport(item):
                        'onclick="window.open(this.src)" align="right"/></div>' % screen_img
                 extra.append(pytest_html.extras.html(html))
         report.extra = extra
-        report.description = str(item.function.__doc__)#.decode('utf-8', 'ignore')  # 不解码转成Unicode，生成HTML会报错
-        # report.nodeid = report.nodeid.encode("utf-8").decode("unicode_escape")
+        report.description = str(item.function.__doc__)
 
-
+        
 @pytest.mark.optionalhook
 def pytest_html_results_table_header(cells):
     cells.insert(1, html.th('Description'))
