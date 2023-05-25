@@ -35,9 +35,10 @@ class Test_Login():
     def test_sendkeys(self):
         """登录提交校验"""
         try:
-            self.login_page.input_username('1430066373@qq.com')
+            # 当前outlook邮箱仅供测试使用
+            self.login_page.input_username('specsoultcanus@outlook.com')
             self.login_page.sleep(1)
-            self.login_page.input_password('z82190464')
+            self.login_page.input_password('Test123qwe')
             self.login_page.sleep(1)
             log.info("输入用户名密码成功")
             self.login_page.click_sumbit
